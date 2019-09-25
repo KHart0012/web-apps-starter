@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <title>Tip/Tax Calculator</title>
+</head>
+<body>
+    <br><br>
+    <h1>Maitre D</h1>
+    <br>
+    <main>
+        <table class="tb">
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <label for="total">Total: $</label>
+                        <input id="total" type="text" class="total" value="" placeholder="0.00">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr class="br">
+            </tr>
+            <tr>
+                <td>
+                     <label>Tip: <span id="tip-amt">$0.00</span></label>
+                </td>
+                <td>
+                    <fieldset>
+                        <label for="rate">Rate: </label>
+                        <input id="rate" type="text" class="text-field" value="" placeholder="0.0%">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Tax: <span id="tax-amt">$0.00</span></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Grand Total: <span id="total-amt">$0.00</span></label>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <section>
+            <button id="calculate">Calculate</button>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
