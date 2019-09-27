@@ -1,14 +1,27 @@
-function calc() {
-    const total = parseFloat(document.querySelector("#total").value)
-    const rate = parseFloat(document.querySelector("#rate").value)
+function calc_shortest(str1, str2, str3){
+    const l1 = str1.length
+    const l2 = str2.length
+    const l3 = str3.length
 
-    const tip = total * (rate / 100)
-    const tax = total * (0.055) // 0.055 = tax rate / 100
-    const final_amt = total + tip + tax
-
-    document.querySelector('#tip-amt').innerHTML = `$${tip.toFixed(2)}`
-    document.querySelector('#tax-amt').innerHTML = `$${tax.toFixed(2)}`
-    document.querySelector('#total-amt').innerHTML = `$${final_amt.toFixed(2)}`
+    if (l1 <= l2 && l1 <= l3){
+        return str1
+    }
+    else if (l2 <= l1 && l2 <= l3){
+        return str2
+    }
+    else {
+        return str3
+    }
 }
 
-document.querySelector('#calculate').addEventListener('click', calc)
+function find_smallest() {
+    const str1 = document.querySelector("#input1").value
+    const str2 = document.querySelector("#input2").value
+    const str3 = document.querySelector("#input3").value
+
+    const shortest = calc_shortest(str1, str2, str3)
+
+    document.querySelector('#result').innerHTML = shortest
+}
+
+document.querySelector('#submit').addEventListener('click', find_smallest)
